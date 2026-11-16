@@ -14,7 +14,7 @@ authors = [
 
 description = "PFNs made ready for BO"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies=[
         'torch>=2.2',
         'scikit-learn>=0.24.2',
@@ -66,3 +66,11 @@ formatter = "ruff-api"
 
 [tool.black]
 line-length = 88
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
